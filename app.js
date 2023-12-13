@@ -1,8 +1,7 @@
 const http = require('http');
 const {Server} = require('socket.io')
-const {readFileSync} = require("fs");
 
-let data = require('/Users/irvansn/Documents/itts/JARINGAN_NIRKABEL/node-indoor-positioning/data/mac.json')
+let data = require(__dirname + '/data/mac.json')
 let users = []
 
 const server = http.createServer();
