@@ -1,19 +1,94 @@
 const http = require('http');
 const {Server} = require('socket.io')
 
-let data = require(__dirname + '/data/mac.json')
+let mac_addresses = require(__dirname + '/data/mac.json')
 let users = []
 
-const server = http.createServer();
+const server = http.createServer((req, res) => {
+  if (req.url === '/mac_addresses' && req.method === "GET") {
+    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 200
+    res.end(JSON.stringify({
+      error: false,
+      data: mac_addresses
+    }));
+  } else {
+    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 404
+    res.end(JSON.stringify({
+      error: true,
+      message: 'Endpoint not found!'
+    }));
+  }
+});
+
+const generateUserData = (data, socketId, currentPosition) => {
+  let userData
+
+  if (data.ssid !== 'ITTelkom_Surabaya') {
+    userData = {
+      id: socketId,
+      name: data.name,
+      address: '00:00:00:00:00:00',
+      currentPosition: 'Outside ITTelkom Surabaya'
+    }
+  } else if (currentPosition.length < 1) {
+    userData = {
+      id: socketId,
+      name: data.name,
+      address: data.mac,
+      currentPosition: 'MAC Address Not Discovered'
+    }
+  } else {
+    userData = {
+      id: socketId,
+      name: data.name,
+      address: data.mac,
+      currentPosition: currentPosition[0].position
+    }
+  }
+
+  return userData
+}
+
 const io = new Server(server, {})
 
 io.on('connection', (socket) => {
   console.log(`a user connected, ${socket.id}`);
+  console.log('connect', users)
 
-  socket.on('login', (name) => {
-    users.push({id: socket.id, name})
-    console.log('login', users)
-    socket.emit('successfulLogin', true)
+  socket.on('login', (data) => {
+    const isDuplicateName = users.find(item => item.name.toLowerCase() === data.name.toLowerCase())
+
+    if (isDuplicateName) return socket.emit('login-status', {
+      status: false,
+      message: 'Terdeteksi duplikasi nama, gunakan nama yang lain!'
+    })
+    const currentPosition = mac_addresses.filter(item => item.addresses.includes(data.mac))
+
+    const userData = generateUserData(data, socket.id, currentPosition)
+
+    users.push(userData)
+
+    socket.emit('login-status', {
+      status: true,
+      data: {
+        userData,
+        users,
+        position: mac_addresses.map(item => {
+          return {id: item.id, position: item.position, image: item.image}
+        })
+      }
+    })
+    socket.broadcast.emit('refresh-user-lists', users)
+  })
+
+  socket.on('refresh-position', (data) => {
+    const currentPosition = mac_addresses.filter(item => item.addresses.includes(data.mac))
+    const userData = generateUserData(data, socket.id, currentPosition)
+    users = users.filter(user => user.id !== socket.id)
+    users.push(userData)
+    console.log('on refresh position', data)
   })
 
   socket.on('disconnect', () => {
