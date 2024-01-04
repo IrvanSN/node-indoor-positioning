@@ -84,11 +84,21 @@ io.on('connection', (socket) => {
   })
 
   socket.on('refresh-position', (data) => {
+    const matchedUser = users.filter(user => user.id === socket.id)[0]
+    if (matchedUser && (matchedUser.address === data.mac)) {
+      console.log('sama nich')
+      return null
+    }
+
     const currentPosition = mac_addresses.filter(item => item.addresses.includes(data.mac))
     const userData = generateUserData(data, socket.id, currentPosition)
+
     users = users.filter(user => user.id !== socket.id)
     users.push(userData)
+
     console.log('on refresh position', data)
+    socket.emit('refresh-user-lists', users)
+    socket.broadcast.emit('refresh-user-lists', users)
   })
 
   socket.on('disconnect', () => {
@@ -98,6 +108,6 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(4000, () => {
+server.listen(3000, () => {
   console.log('Socket.io server listening on port 4000');
 });
