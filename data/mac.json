@@ -2,7 +2,7 @@
   {
     "id": 1,
     "position": "Lt 1 Range 1 (Sayap Kanan)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai1/range_11.png",
     "addresses": [
       "06:05:88:C0:B6:51",
       "06:05:88:9B:3E:74",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "position": "Lt 1 Range 2 (Sayap Kanan)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai1/range_12.png",
     "addresses": [
       "06:05:88:C0:B8:21",
       "06:05:88:C0:B8:61",
@@ -27,7 +27,7 @@
   {
     "id": 3,
     "position": "Lt 1 Range 3 (Sayap Kanan)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai1/range_13.png",
     "addresses": [
       "06:05:88:C0:B8:09",
       "12:85:C4:D2:24:82",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "position": "Lt 1 Range 4 (Tengah)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai1/range_14.png",
     "addresses": [
       "06:05:88:BE:EA:AF",
       "06:05:88:BE:EA:B0"
@@ -47,7 +47,7 @@
   {
     "id": 5,
     "position": "Lt 1 Range 5 (Sayap Kiri)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai1/range_15.png",
     "addresses": [
       "06:05:88:C0:B7:69",
       "22:85:C4:D2:25:13",
@@ -60,7 +60,7 @@
   {
     "id": 6,
     "position": "Lt 1 Range 6 (Sayap Kiri)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai1/range_16.png",
     "addresses": [
       "22:85:C4:CE:05:F3",
       "32:85:C4:CE:05:F4",
@@ -73,7 +73,7 @@
   {
     "id": 7,
     "position": "Lt 1 Range 7 (Sayap Kiri)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai1/range_17.png",
     "addresses": [
       "C2:85:C4:D2:23:3D",
       "06:05:88:C0:B8:65",
@@ -88,7 +88,7 @@
   {
     "id": 8,
     "position": "Lt 2 Range 1 (Sayap Kanan)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai2/range_21.png",
     "addresses": [
       "06:05:88:C0:B9:15",
       "62:85:C4:D3:DF:97",
@@ -100,7 +100,7 @@
   {
     "id": 9,
     "position": "Lt 2 Range 2 (Sayap Kanan)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai2/range_22.png",
     "addresses": [
       "06:05:88:BE:EA:CB",
       "9E:2B:A6:71:5E:DA",
@@ -111,7 +111,7 @@
   {
     "id": 10,
     "position": "Lt 2 Range 3 (Sayap Kanan)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai2/range_23.png",
     "addresses": [
       "06:05:88:BE:EA:F3",
       "C2:85:C4:D3:DF:8D",
@@ -126,7 +126,7 @@
   {
     "id": 11,
     "position": "Lt 2 Range 4 (Tengah)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai2/range_24.png",
     "addresses": [
       "06:05:88:BE:EA:EB",
       "06:05:88:BE:EA:EC",
@@ -140,7 +140,7 @@
   {
     "id": 12,
     "position": "Lt 2 Range 5 (Sayap Kiri)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai2/range_25.png",
     "addresses": [
       "06:05:88:BE:EA:DB",
       "5E:2B:A6:71:5F:26",
@@ -155,7 +155,7 @@
   {
     "id": 13,
     "position": "Lt 2 Range 6 (Sayap Kiri)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai2/range_26.png",
     "addresses": [
       "76:70:AB:69:F8:98",
       "DE:2B:A6:71:5E:EE",
@@ -173,7 +173,7 @@
   {
     "id": 14,
     "position": "Lt 2 Range 7 (Sayap Kiri)",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai2/range_27.png",
     "addresses": [
       "06:05:88:C8:FA:D1",
       "06:05:88:C8:FA:D2",
@@ -184,7 +184,7 @@
   {
     "id": 15,
     "position": "Rooftop",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai3/rooftop.png",
     "addresses": [
       "06:05:88:9B:3E:5C",
       "06:05:88:9B:3E:5D"
@@ -193,7 +193,7 @@
   {
     "id": 16,
     "position": "Lt 3 Tengah",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai3/lt3_tengah.png",
     "addresses": [
       "06:05:88:C8:FB:1E",
       "06:05:88:C0:B9:1A",
@@ -203,7 +203,7 @@
   {
     "id": 17,
     "position": "Lt 3 Kiri",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai3/lt3_kiri.png",
     "addresses": [
       "06:05:88:3B:83:45",
       "06:05:88:3B:77:11",
@@ -213,7 +213,7 @@
   {
     "id": 18,
     "position": "Lt 3 Kanan",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantai3/lt3_kanan.png",
     "addresses": [
       "06:74:9C:EB:AE:78",
       "06:05:88:C0:B9:19",
@@ -225,7 +225,7 @@
   {
     "id": 19,
     "position": "Depan R. Logistik",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantaig/depan_logistik.png",
     "addresses": [
       "06:05:88:C8:FB:06",
       "06:05:88:C8:FB:05"
@@ -234,7 +234,7 @@
   {
     "id": 20,
     "position": "Depan R. Dos. RPL",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantaig/depan_rpl.png",
     "addresses": [
       "06:05:88:C8:FA:F1",
       "06:05:88:9B:3E:30",
@@ -247,7 +247,7 @@
   {
     "id": 21,
     "position": "Depan R. Dos. Teknik Logistik",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantaig/depan_tlogistik.png",
     "addresses": [
       "06:05:88:C8:FB:11",
       "06:05:88:C8:FA:39",
@@ -262,7 +262,7 @@
   {
     "id": 22,
     "position": "Lobby Gedung ITTelkom",
-    "image": "",
+    "image": "https://is3.cloudhost.id/andiprtm/lantaig/lobby.png",
     "addresses": [
       "06:74:9C:64:A5:8A",
       "06:74:9C:64:A5:8B",
