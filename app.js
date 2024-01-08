@@ -101,9 +101,19 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('refresh-user-lists', users)
   })
 
+  socket.on('get-current-data', (data) => {
+    if (data.filter) {
+
+    } else {
+      socket.emit('current-users-list', users)
+    }
+  })
+
   socket.on('disconnect', () => {
     console.log(`a user disconnected, ${socket.id}`);
     users = users.filter(user => user.id !== socket.id)
+    socket.emit('user-disconnected', users)
+    socket.broadcast.emit('user-disconnected', users)
     console.log('disconnect', users)
   });
 });
